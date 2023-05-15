@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Cob MSDV 2023 Thesis</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/d3-array@1"></script>
+    <script src="https://unpkg.com/d3-collection@1"></script>
+    <script src="https://unpkg.com/d3-path@1"></script>
+    <script src="https://unpkg.com/d3-shape@1"></script>
+    <script src="https://unpkg.com/d3-sankey@0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- ScrollMagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!-- ScrollMagic debug indicators -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+</head>
+
+<body>
+    <nav>
+        <a href="#" id="prev" class="arrows"><i class="fas fa-arrow-up"></i></a>
+        <ul>
+            <li><a href="#landing-page" class="circle"></a></li>
+            <li><a href="#introduction" class="circle"></a></li>
+            <li><a href="#welcome-transition" class="circle"></a></li>
+            <li><a href="#types-usage" class="circle"></a></li>
+            <li><a href="#economic-impact" class="circle"></a></li>
+            <li><a href="#environmental-transition" class="circle"></a></li>
+            <li><a href="#environmental-impact" class="circle"></a></li>
+            <li><a href="#health-impact" class="circle"></a></li>
+            <li><a href="#end-transition" class="circle"></a></li>        </ul>
+        <a href="#" id="next" class="arrows"><i class="fas fa-arrow-down"></i></a>
+    </nav>    
+    
+    <!-- Landing Page Section -->
+    <section id="landing-page" class=" py-5">
+
+        <h1>Beyond the Cob</h1>
+        <p class="lead">Exploring the Impact of Corn in America<br />Stephanie Dang | 2023<br /> </p>
+        <img src="images/cornelius.svg" id="#corn-icon" alt="Icon" style="height: 150px; width: 150px;">
+
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class=" text-center py-5">
+        <div class="container">
+            <h1>Corn in America</h1>
+            <h5>
+                The Corn Belt consists of 13 states:<span style="color: #2d6a4f;"><strong> Illinois, Indiana, Iowa, Kansas, Kentucky, Michigan, 
+                <br />Minnesota, Missouri, Nebraska, North Dakota, Ohio, South Dakota, Wisconsin.</strong></span>
+            </h5>
+
+            <div id="map-container"></div>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+            <script src="map.js"></script>
+
+        </div>
+    </section>
+
+    <section id="welcome-transition" class=" text-center py-5">
+
+        <div id="corn-center" class="container">
+            <img src="images/cornelius.svg" id="corn-icon" alt="Icon" style="height: 200px; width: 200px;">
+            <div class="speech-bubble">
+                <p>  In 2021, the US produced <strong>21%</strong> of the
+                    <br />world’s total corn stock alone. 
+                    <br />Where does it all end up?
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Types of Corn Usage Section -->
+    <section id="types-usage" class=" text-center py-5">
+        <div class="container">
+            <h1>Types of Corn Usage</h1>
+            <h5>
+                Corn primarily ends up in four different buckets: 
+                <strong><span style="color: #ADAC33;">animal feed</span>, 
+                    <span style="color: #d5bdaf;">ethanol</span>,
+                    <span style="color: #FBC107;">exports</span>,
+                    <span style="color: #893302;">food</span>.
+                </strong> 
+            </h5>
+
+            <div id="treemap-container"></div>
+            <script src="treemap.js"></script>
+
+        </div>
+    </section>
+
+    <!-- Economic Impact Section -->
+    <section id="economic-impact" class=" text-center py-5">
+        <div class="container">
+            <h1>Economic Impact</h1>
+            <h5>
+                We see that typically the price of corn and ground beef rise and fall together.
+                <br />Subsidies help keep prices low for us, but can have unintended environmental consequences.
+            </h5>
+
+            <div id="chart-container"></div>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+            <script src="linechart.js"></script>
+
+        </div>
+    </section>
+
+    <section id="environmental-transition" class=" text-center py-5">
+
+        <div id="corn-center" class="container">
+            <img src="images/cornelius2.svg" id="corn-icon" alt="Icon" style="height: 200px; width: 200px;">
+            <div class="speech-bubble">
+                <p>Did you know that <strong>26% of global green </strong> 
+                    <br /><strong>emissions</strong> come from food production?
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Environmental Impact Section -->
+    <section id="environmental-impact" class=" text-center py-5">
+        <div class="container">
+            <h1>Environmental Impact</h1>
+            <p>
+
+            </p>
+
+            <div id="sankey-container"></div>
+            <script src="sankey.js"></script>
+        </div>
+    </section>
+
+    <!-- Health Impact Section -->
+    <section id="health-impact" class=" text-center py-5">
+        <div class="container">
+            <h1>Health Impact</h1>
+            <h5>
+                Corn could be a factor in the average ounces of corn consumed rising from <strong>12% to 26%</strong> in the last 50 years.
+            </h5>
+
+            <div id="bar-container"></div>
+            <div id="chart-tooltip" class="chart-tooltip"></div>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+            <script src="barchart.js"></script>
+
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="end-transition" class=" text-center py-5">
+
+        <div id="corn-center" class="container">
+            <img src="images/cornelius2.svg" id="corn-icon" alt="Icon" style="height: 200px; width: 200px;">
+            <div class="speech-bubble">
+                <p><strong>Subsidized Foods 
+                    <br />Environmental Degradation 
+                    <br />Health Risks</strong> <br />
+                    <br /><strong>Where do we go from here?</strong>
+                </p>
+            </div>
+        </div>
+
+    </section>
+    
+    <script src="main.js"></script>
+
+</body>

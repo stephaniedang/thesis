@@ -1,0 +1,11 @@
+Emission Food Group,Emission Food Subgroup,Value
+Supply chain,Retail,3
+Supply chain,Packaging,5
+Supply chain,Transport,6
+Supply chain,	Food processing,4
+Livestock and fisheries,Wild fisheries,1
+Livestock and fisheries,Livestock and fish farms,30
+Crop production,Crops for animal feed,6
+Crop production,Crops for human food,21
+Land use,Land use for human food,8
+Land use,Land use for livestock,16
