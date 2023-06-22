@@ -3,7 +3,7 @@
 // Sankey Function
 function createSankeyChart(selector, data) {
   const width = 960;
-  const height = 650;
+  const height = 595;
 
   const svg = d3.select(selector)
     .append('svg')

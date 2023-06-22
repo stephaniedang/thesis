@@ -30,14 +30,18 @@
         <a href="#" id="prev" class="arrows"><i class="fas fa-arrow-up"></i></a>
         <ul>
             <li><a href="#landing-page" class="circle"></a></li>
+            <li><a href="#intro-transition" class="circle"></a></li>
             <li><a href="#introduction" class="circle"></a></li>
             <li><a href="#welcome-transition" class="circle"></a></li>
             <li><a href="#types-usage" class="circle"></a></li>
+            <li><a href="#economic-transition" class="circle"></a></li>
             <li><a href="#economic-impact" class="circle"></a></li>
             <li><a href="#environmental-transition" class="circle"></a></li>
             <li><a href="#environmental-impact" class="circle"></a></li>
             <li><a href="#health-impact" class="circle"></a></li>
-            <li><a href="#end-transition" class="circle"></a></li>        </ul>
+            <li><a href="#last-transition" class="circle"></a></li>       
+            <li><a href="#takeaways" class="circle"></a></li>
+         </ul>
         <a href="#" id="next" class="arrows"><i class="fas fa-arrow-down"></i></a>
     </nav>    
     
@@ -50,14 +54,33 @@
 
     </section>
 
+    <!-- Transition to Intro Section -->
+    <section id="intro-transition" class=" text-center py-5">
+
+        <div id="corn-center" class="container">
+            <img src="images/cornelius.svg" id="corn-icon" alt="Icon" style="height: 200px; width: 200px;">
+            <div class="speech-bubble">
+                <p>  If you’ve ever drank a soda, eaten a hamburger, or filled up a car with gas,
+                    <br />then you might be surprised to find that you were getting a side of 
+                    <br />corn alongside all those things. Corn is all around us in
+                    <br />sometimes the most unexpected forms. I'm Cornelius and 
+                    <br />I'll help show you around this crazy corn world.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
     <!-- Introduction Section -->
     <section id="introduction" class=" text-center py-5">
         <div class="container">
             <h1>Corn in America</h1>
-            <h5>
-                The Corn Belt consists of 13 states:<span style="color: #2d6a4f;"><strong> Illinois, Indiana, Iowa, Kansas, Kentucky, Michigan, 
+            <h6>
+                Corn is one of the most beloved crops in all shapes and sizes. Who doesn’t love corn?
+                <br />The Corn Belt of the Midwest contributes to a majority of corn produced in the US. 
+                <br />It consists of 13 states:<span style="color: #2d6a4f;"><strong> Illinois, Indiana, Iowa, Kansas, Kentucky, Michigan, 
                 <br />Minnesota, Missouri, Nebraska, North Dakota, Ohio, South Dakota, Wisconsin.</strong></span>
-            </h5>
+            </h6>
 
             <div id="map-container"></div>
             <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
@@ -71,9 +94,10 @@
         <div id="corn-center" class="container">
             <img src="images/cornelius.svg" id="corn-icon" alt="Icon" style="height: 200px; width: 200px;">
             <div class="speech-bubble">
-                <p>  In 2021, the US produced <strong>21%</strong> of the
-                    <br />world’s total corn stock alone. 
-                    <br />Where does it all end up?
+                <p>  We grow so much corn that it makes up
+                    <br /><span style="color: #2d6a4f;"><strong>21% of the global corn supply!</strong></span>
+                    <br />And if you were wondering where 
+                    <br />all that corn ends up, then I got you covered.
                 </p>
             </div>
         </div>
@@ -84,14 +108,17 @@
     <section id="types-usage" class=" text-center py-5">
         <div class="container">
             <h1>Types of Corn Usage</h1>
-            <h5>
+            <h6>
                 Corn primarily ends up in four different buckets: 
                 <strong><span style="color: #ADAC33;">animal feed</span>, 
                     <span style="color: #d5bdaf;">ethanol</span>,
                     <span style="color: #FBC107;">exports</span>,
                     <span style="color: #893302;">food</span>.
                 </strong> 
-            </h5>
+                <br />The majority of this corn is processed into animal feed or ethanol for biofuels.
+                <br />The remaining is exported or converted into various food products.
+                <br /><strong>Hover over the sections to see how much corn goes where!</strong>
+            </h6>
 
             <div id="treemap-container"></div>
             <script src="js/treemap.js"></script>
@@ -99,14 +126,32 @@
         </div>
     </section>
 
+    <!-- Transition to Economic Section -->
+    <section id="economic-transition" class=" text-center py-5">
+
+        <div id="corn-center" class="container">
+            <img src="images/cornelius.svg" id="corn-icon" alt="Icon" style="height: 200px; width: 200px;">
+            <div class="speech-bubble">
+                <p>  It’s pretty crazy all the different ways you can spin a cob of corn.
+                    <br />As with most good things in life, corn is not without its faults.
+                    <br />Let’s take a closer look into how corn 
+                    <br />impacts our environment, economy, and health.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
     <!-- Economic Impact Section -->
     <section id="economic-impact" class=" text-center py-5">
         <div class="container">
             <h1>Economic Impact</h1>
-            <h5>
-                We see that typically the price of corn and ground beef rise and fall together.
-                <br />Subsidies help keep prices low for us, but can have unintended environmental consequences.
-            </h5>
+            <h6>
+                Corn is real big business around here! It’s subsidized by the government to assist farmers and to
+                <br />keep food prices low in the aisles of our grocery stores. Beef is one common food that has a strong relationship
+                <br />with the rise in corn production. We can see the price of corn and ground beef has often risen in-sync since the 80s.
+                <br />Because corn is a common ingredient in animal feed – if the price of their food rises, then so does ours. 
+            </h6>
 
             <div id="chart-container"></div>
             <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
@@ -120,8 +165,8 @@
         <div id="corn-center" class="container">
             <img src="images/cornelius2.svg" id="corn-icon" alt="Icon" style="height: 200px; width: 200px;">
             <div class="speech-bubble">
-                <p>Did you know that <strong>26% of global green </strong> 
-                    <br /><strong>emissions</strong> come from food production?
+                <p>Did you know that <span style="color: #2d6a4f;"><strong>26% of global green </strong></span> 
+                    <br /><span style="color: #2d6a4f;"><strong>emissions</strong></span>  come from food production?
                 </p>
             </div>
         </div>
@@ -132,9 +177,13 @@
     <section id="environmental-impact" class=" text-center py-5">
         <div class="container">
             <h1>Environmental Impact</h1>
-            <p>
-
-            </p>
+            <h6>
+                These emissions come from current livestock farms and fisheries, crop production, land use, supply chain practices 
+                <br />and standards. How has cheap corn affected the world it sprouted from? Corn is a strong driver in 
+                <br />our food supply system - that animal feed from earlier makes it easier to raise large amounts of livestock
+                <br />and fish for mass consumption. To keep these items cheap, we have to continue producing corn to sustain this 
+                <br />cycle but at the risk of increasing environmental damage.
+            </h6>
 
             <div id="sankey-container"></div>
             <script src="js/sankey.js"></script>
@@ -145,9 +194,14 @@
     <section id="health-impact" class=" text-center py-5">
         <div class="container">
             <h1>Health Impact</h1>
-            <h5>
-                Corn could be a factor in the average ounces of corn consumed rising from <strong>12% to 26%</strong> in the last 50 years.
-            </h5>
+            <h6>
+                In the last 50 years, average corn consumption has doubled in our daily diets. How did that happen exactly? 
+                <br />Well, corn is quite the chameleon as we've seen. It takes on so many identities from cornstarch and corn
+                <br />syrup to dextrose and fructose. These corn derivatives have found their way into everyday foods. Bread, 
+                <br />jams, ketchup, and potato chips are just a few! If you think about what you ate today, there’s a high chance 
+                <br />there was some type of corn ingredient in there somewhere.
+                <br /><strong>Hover over to see on average how much corn we're consuming!</strong>
+            </h6>
 
             <div id="bar-container"></div>
             <div id="chart-tooltip" class="chart-tooltip"></div>
@@ -158,19 +212,32 @@
     </section>
 
     <!-- Resources Section -->
-    <section id="end-transition" class=" text-center py-5">
+    <section id="last-transition" class=" text-center py-5">
 
         <div id="corn-center" class="container">
             <img src="images/cornelius2.svg" id="corn-icon" alt="Icon" style="height: 200px; width: 200px;">
             <div class="speech-bubble">
-                <p><strong>Subsidized Foods 
-                    <br />Environmental Degradation 
-                    <br />Health Risks</strong> <br />
-                    <br /><strong>Where do we go from here?</strong>
+                <p>  This isn’t to shame corn in the end. It can be a healthy
+                    <br />part of a balanced diet, but overconsumption
+                    <br />of processed corn products has been linked
+                    <br />to various chronic health issues.
                 </p>
             </div>
         </div>
 
+    </section>
+
+    <section id="takeaways" class=" text-center py-5">
+        <div class="container">
+            <h1>Takeaways</h1>
+            <h5>
+                As much as we love corn, and with all good things, it’s not always golden. Our connection 
+                <br />to corn is complex; it’s neither good nor bad. It simply has become a staple of our
+                <br />modern lifestyles. Knowing this is powerful – corn is here to stay and being aware
+                <br />of its impacts can help inform our future choices.
+            </h4>
+
+        </div>
     </section>
     
     <script src="js/main.js"></script>

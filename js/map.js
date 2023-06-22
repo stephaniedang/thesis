@@ -18,7 +18,7 @@ const cornBeltStates = [
 
 function createUSMap(geojson) {
     const width = 960;
-    const height = 600;
+    const height = 595;
 
     const svg = d3.select("#map-container")
         .append("svg")
