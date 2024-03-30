@@ -2,12 +2,12 @@
 
 // Corn Map Function
 
-let geojsonData;  // Define geojsonData variable
+let geojsonData;
 
 // Preload the data
 d3.json("data/states.json").then(data => {
     geojsonData = data;
-    createUSMap(geojsonData);  // Create the map right away
+    createUSMap(geojsonData); 
 });
 
 const cornBeltStates = [
@@ -43,18 +43,17 @@ function createUSMap(geojson) {
 
     // Add a source footer
     svg.append("text")
-    .attr("x", 10)  // Position it in the middle of the SVG width
-    .attr("y", height)  // Position it near the bottom of the SVG height
-    .attr("text-anchor", "start")  // Align the text to the middle
-    .attr("font-family", "Arial, sans-serif")  // Choose a font
-    .attr("font-size", "10px")  // Choose a font size
-    .attr("fill", "#999")  // Choose a text color
-    .text("Source: National Centers for Environmental Information");  // The text to display
+    .attr("x", 10) 
+    .attr("y", height) 
+    .attr("text-anchor", "start")
+    .attr("font-family", "Arial, sans-serif")  
+    .attr("font-size", "10px")  
+    .attr("fill", "#999") 
+    .text("Source: National Centers for Environmental Information");  
 
 }
 
 function colorCornBelt() {
-    // Change the color of the Corn Belt states
     d3.selectAll(".corn-belt")
         .transition()
         .duration(1500)
@@ -62,19 +61,15 @@ function colorCornBelt() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Setup IntersectionObserver
     let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // If the element is in the viewport, start the animation
             if(entry.isIntersecting) {
-                colorCornBelt();  // Color the Corn Belt when intersection is observed
-                // Stop observing once the animation has started
+                colorCornBelt();
                 observer.unobserve(entry.target);
             }
         });
     }, { rootMargin: '0px', threshold: 0.1 });
 
-    // Observe the chart container
     let mapContainer = document.getElementById('map-container');
     observer.observe(mapContainer);
 });

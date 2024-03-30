@@ -148,7 +148,7 @@ function createLineChart(selector, data1, data2) {
         .attr("y", -padding);
 
     // Add point markers with SVG images and animate them
-    const totalTime = 8000; // 8 seconds
+    const totalTime = 8000;
     
     function animateMarker(marker, data, linePath, clipPath, totalTime) {
         // Get total length of the path
@@ -181,7 +181,7 @@ function createLineChart(selector, data1, data2) {
         linePath.attr('stroke-dasharray', `0,${totalLength}`)
             .transition()
             .duration(totalTime)
-            .ease(d3.easeCubicInOut) // Use the same easing function for the line
+            .ease(d3.easeCubicInOut)
             .attr('stroke-dasharray', `${totalLength},0`);
     }
     
@@ -203,33 +203,26 @@ function createLineChart(selector, data1, data2) {
 
     // Add a source footer
     svg.append("text")
-    .attr("x", 10)  // Position it 10 units from the left edge of the SVG
-    .attr("y", height - 10)  // Position it 10 units from the bottom edge of the SVG
-    .attr("text-anchor", "start")  // Align the text to the start (left)
-    .attr("font-family", "Arial, sans-serif")  // Choose a font
-    .attr("font-size", "10px")  // Choose a font size
-    .attr("fill", "#999")  // Choose a text color
-    .text("Source: USDA Economic Research Service, Federal Reserve Economic Data St. Louis Fed");  // The text to display
+    .attr("x", 10)  
+    .attr("y", height - 10)  
+    .attr("text-anchor", "start") 
+    .attr("font-family", "Arial, sans-serif") 
+    .attr("font-size", "10px")  
+    .attr("fill", "#999") 
+    .text("Source: USDA Economic Research Service, Federal Reserve Economic Data St. Louis Fed"); 
     
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Setup IntersectionObserver
     let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // If the element is in the viewport, start the animation
             if(entry.isIntersecting) {
                 loadDataAndCreateLineChart('#chart-container', 'data/corn_beef_price_yoy.csv');
-                // Stop observing once the animation has started
                 observer.unobserve(entry.target);
             }
         });
     }, { rootMargin: '0px', threshold: 0.1 });
 
-    // Observe the chart container
     let chartContainer = document.getElementById('chart-container');
     observer.observe(chartContainer);
 });
-
-// Usage: call the createLineChart function with a CSS selector for the container element
-// loadDataAndCreateLineChart('#chart-container', 'data/corn_beef_price_yoy.csv');

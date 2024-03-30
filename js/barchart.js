@@ -84,16 +84,16 @@ function createPercentageStackedBarChart(selector, data) {
     .enter()
     .append("rect")
     .attr("y", (d) => y(d.data.year))
-    .attr("x", 0) // initial x position is 0
+    .attr("x", 0)
     .attr("height", y.bandwidth())
-    .attr("width", 0); // initial width is 0
+    .attr("width", 0); 
 
 // Apply the transition
   rects.transition()
-      .duration(4000) // duration of the transition in milliseconds
-      .delay(function(d, i) { return i * 100; }) // delay the start of each transition
-      .attr("x", (d) => x(d[0])) // animate the x position to its actual starting point
-      .attr("width", (d) => x(d[1]) - x(d[0])); // animate the width to its actual value
+      .duration(4000) 
+      .delay(function(d, i) { return i * 100; })
+      .attr("x", (d) => x(d[0])) 
+      .attr("width", (d) => x(d[1]) - x(d[0])); 
 
     svg
       .append("g")
@@ -141,18 +141,16 @@ function createPercentageStackedBarChart(selector, data) {
       })
       .on("mousemove", function (event) {
         const [x, y] = d3.pointer(event, this);
-        const tooltipWidth = 200; // Match the width of the foreignObject element
-        const tooltipHeight = 50; // Match the height of the foreignObject element
+        const tooltipWidth = 200; 
+        const tooltipHeight = 50;
       
         let xPos = x;
         let yPos = y - tooltipHeight
       
-        // Check if the tooltip goes beyond the right edge of the SVG
         if (xPos + tooltipWidth > width) {
           xPos = width - tooltipWidth;
         }
       
-        // Check if the tooltip goes beyond the top edge of the SVG
         if (yPos < 0) {
           yPos = 0;
         }
@@ -169,33 +167,25 @@ function createPercentageStackedBarChart(selector, data) {
 
       // Add a source footer
       svg.append("text")
-      .attr("x", -10)  // Position it 10 units from the left edge of the SVG
-      .attr("y", height+40)  // Position it 10 units from the bottom edge of the SVG
-      .attr("text-anchor", "start")  // Align the text to the start (left)
-      .attr("font-family", "Arial, sans-serif")  // Choose a font
-      .attr("font-size", "10px")  // Choose a font size
-      .attr("fill", "#999")  // Choose a text color
+      .attr("x", -10)
+      .attr("y", height+40) 
+      .attr("text-anchor", "start") 
+      .attr("font-family", "Arial, sans-serif") 
+      .attr("font-size", "10px")  
+      .attr("fill", "#999") 
       .text("Source: USDA Economic Research Service");
   }
 
   document.addEventListener("DOMContentLoaded", function() {
-    // Setup IntersectionObserver
     let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // If the element is in the viewport, start the animation
             if(entry.isIntersecting) {
-                // Call your function with the appropriate URL or file path
                 createPercentageStackedBarChart("#bar-container", exampleData);
-                // Stop observing once the animation has started
                 observer.unobserve(entry.target);
             }
         });
     }, { rootMargin: '0px', threshold: 0.1 });
 
-    // Observe the chart container
     let barContainer = document.getElementById('bar-container');
     observer.observe(barContainer);
 });
-  
-  // Call the function with the example data
-  // createPercentageStackedBarChart("#bar-container", exampleData);
